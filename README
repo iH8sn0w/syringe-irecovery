@@ -1,24 +1,18 @@
-/**
-  * GreenPois0n Syringe
-  * Copyright (C) 2010 Chronic-Dev Team
-  * Copyright (C) 2010 Joshua Hill
-  *
-  * This program is free software: you can redistribute it and/or modify
-  * it under the terms of the GNU General Public License as published by
-  * the Free Software Foundation, either version 3 of the License, or
-  * (at your option) any later version.
-  *
-  * This program is distributed in the hope that it will be useful,
-  * but WITHOUT ANY WARRANTY; without even the implied warranty of
-  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  * GNU General Public License for more details.
-  *
-  * You should have received a copy of the GNU General Public License
-  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- **/
+== What is iRecovery? ==
 
-What is syringe?
+iRecovery is a libusb-based commandline utility for Mac OS X and Linux (perhaps windows too but I'm not developing/testing under windows). It is able to talk to the iBoot/iBSS in Apple's iPhone/iPod touch via USB.
 
-	Syringe is the "Injector" module from GreenPois0n. It's used for sending exploits to the device 
-	and booting the device out of recovery mode, and into a jailbroken state, whether to a ramdisk 
-	or to the main filesystem.
+It's completely open-source, the source-code is released under the terms of the GNU General Public License version 3.
+The full license text can be found in the LICENSE file.
+
+It currently connects to 0x1281 (iPhone, iPhone 3G, iPod touch, iPod touch 2G: Recovery Mode/iBSS), 0x1227 (iPhone, iPhone 3G, iPod touch: WTF Mode; iPod touch 2G: DFU Mode).
+
+== Usage ==
+
+	./iRecovery -s 			starts a shell.
+	./iRecovery -r 			usb reset.
+	./iRecovery -f <file>		uploads a file.
+	./iRecovery -c "command"	send a single command.
+	./iRecovery -l <file>		sends a set of commands from a file (one per line).
+	./Irecovery -x <file>		uploads a file then resets the usb connection.
+	
