@@ -15,4 +15,6 @@ It currently connects to 0x1281 (iPhone, iPhone 3G, iPod touch, iPod touch 2G: R
 	./iRecovery -c "command"	send a single command.
 	./iRecovery -l <file>		sends a set of commands from a file (one per line).
 	./Irecovery -x <file>		uploads a file then resets the usb connection.
+        ./iRecovery -lime <file>        uploads shellcode then executes the limera1n exploit.
+        ./iRecovery -s4u <file>         uploads shellcode then executes the steaks4uce exploit.
 	
