@@ -639,6 +639,7 @@ void irecv_usage(void) {
 	printf("\t-c <command>\t\tsend a single command.\n");
 	printf("\t-k [payload]\t\tsend usb exploit and payload.\n");
         printf("\t-s4u [payload]\t\tsend steaks4uce usb exploit and payload.\n");
+        printf("\t-lime [payload]\t\tsend limera1n usb exploit and payload.\n"
 	printf("\t-s [logfile]\t\tstarts a shell, and log output.\n");
 	printf("\t-l <file> \t\tsend a set of commands from a file (1 per line).");
 	printf("\t-x <file> \t\tUploads a file, then auto-resets the usb connection.\n");
@@ -703,6 +704,12 @@ int main(int argc, char *argv[]) {
                 if(argc >= 3) {
                         irecv_steaks4uce(handle, argv[2]);
 			irecv_reset(handle);
+                }
+
+        } else if(!strcmp(argv[1], "-lime")) {
+                if(argc >= 3) {
+                        irecvlimera1n(handle, argv[2]);
+                        irecv_reset(handle);
                 }
 
 	} else if(!strcmp(argv[1], "-x40")) {
